@@ -16,7 +16,7 @@ import utils.DBUtil;
 /**
  * Servlet implementation class EmployeesEditServlet
  */
-@WebServlet({ "/EmployeesEditServlet", "/employees/edit" })
+@WebServlet("/employees/edit" )
 public class EmployeesEditServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -40,7 +40,7 @@ public class EmployeesEditServlet extends HttpServlet {
 
 		request.setAttribute("employee", e);
 		request.setAttribute("_token", request.getSession().getId());
-		request.setAttribute("employee_id", e.getId());
+		request.getSession().setAttribute("employee_id", e.getId());
 
 		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/employees/edit.jsp");
 		rd.forward(request, response);

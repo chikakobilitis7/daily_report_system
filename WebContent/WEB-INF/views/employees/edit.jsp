@@ -4,9 +4,9 @@
     <c:param name="content">
     <c:choose>
         <c:when test="${employee != null}" >
-            <h2>id : ${emoloyee.id} の従業員情報</h2>
+            <h2>id : ${employee.id} の従業員情報</h2>
             <p>(パスワードは変更する場合のみ入力してください)</p>
-            <form method="POST" action="<c:url value='employees/update' />">
+            <form method="POST" action="<c:url value='/employees/update' />">
                 <c:import url="_form.jsp" />
             </form>
 
