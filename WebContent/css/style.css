@@ -88,6 +88,10 @@ tr.row0 {
         background-color: #ffffff;
 }
 
+select {
+    height: 30px;
+}
+
 #header_menu {
     width: 57%;
     padding-top: 17px;
