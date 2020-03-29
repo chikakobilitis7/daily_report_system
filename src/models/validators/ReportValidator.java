@@ -7,7 +7,7 @@ import models.Report;
 
 public class ReportValidator {
 public static List<String> validate(Report r){
-	List<String> errors = new ArrayList();
+	List<String> errors = new ArrayList<String>();
 
 	String title_error = validateTitle(r.getTitle());
 		if(!title_error.equals("")){
