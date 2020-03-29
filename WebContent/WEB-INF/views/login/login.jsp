@@ -8,6 +8,11 @@
                 <c:out value="${flush}"></c:out>
             </div>
         </c:if>
+        <c:if test="${flush != null}">
+        <div id="flush_success" >
+            <c:out value="${flush}"></c:out>
+        </div>
+        </c:if>
         <h2>ログイン</h2>
         <form method="POST" action="<c:url value='/login' />">
             <label for="code">社員番号</label><br />
