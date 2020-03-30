@@ -15,22 +15,26 @@
                         </tr>
                         <tr>
                             <th>日付</th>
+                            <td><fmt:formatDate  value="${report.report_date}" pattern="yyyy-MM-dd" /></td>
+                        </tr>
+                        <tr>
+                            <th>内容</th>
                             <td>
                                 <pre><c:out value="${report.content}" /></pre>
+                           </td>
+                        </tr>
+                            <tr>
+                            <th>登録日時</th>
+                            <td>
+                               <fmt:formatDate value="${report.created_at}" pattern="yyyy-MM-dd HH:mm:ss" />
                             </td>
                         </tr>
                         <tr>
-                           <th>登録日時</th>
-                           <td>
-                               <fmt:formatDate value="${report.created_at}" pattern="yyyy-MM-dd HH:mm:ss" />
-                           </td>
-                       </tr>
-                       <tr>
-                           <th>更新日時</th>
-                           <td>
+                            <th>更新日時</th>
+                            <td>
                                <fmt:formatDate value="${report.updated_at}" pattern="yyyy-MM-dd HH:mm:ss" />
-                           </td>
-                       </tr>
+                            </td>
+                        </tr>
                    </tbody>
                </table>
 
