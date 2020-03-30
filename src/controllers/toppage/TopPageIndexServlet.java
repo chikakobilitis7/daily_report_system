@@ -47,7 +47,8 @@ public class TopPageIndexServlet extends HttpServlet {
 		List<Report> reports = em.createNamedQuery("getMyAllReports", Report.class)
 				                 .setParameter("employee", login_employee)
 				                 .setFirstResult(15 * (page - 1))
-				                 .getResultList();
+				                 .setMaxResults(15)
+      			                 .getResultList();
 
 		long reports_count = (long)em.createNamedQuery("getMyReportsCount", Long.class)
 				                     .setParameter("employee", login_employee)
